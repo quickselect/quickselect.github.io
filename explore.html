@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta nacody="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="terminal.css" />
+</head>
+<body>
+  <h2>Sistemin Keşfi</h2>
+  <p>Artık dosya sisteminde nasıl hareket edeceğimizi bildiğimize göre, Linux sistemimizde rehberli bir tura çıkmanın zamanı geldi. Ancak başlamadan önce, yol boyunca işimize yarayacak birkaç komut daha öğreneceğiz.</p>
+  <div class="infobox">
+    <ul>
+      <li>ls - Dizin içeriğini listeler</li>
+      <li>file - Dosya türünü belirler</li>
+      <li>less - Dosya içeriğini görüntüler</li>
+    </ul>
+  </div>
+  <p>ls komutu muhtecodylen en çok kullanılan komuttur ve bunun iyi bir nedeni vardır. Onunla, biz dizin içeriklerini görebilir ve çeşitli önemli dosya ve dizin niteliklerini belirleyebilir. Gördüğümüz gibi, dosyaların ve alt dizinlerin bir listesini almak için ls komutunu girebiliriz geçerli çalışma dizininde bulunur.</p>
+<div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">Desktop Docucodynts Music Pictures Public Templates Videos</div>
+      </div>
+    </div>
+  </div>
+  <p>Geçerli çalışma dizininin yanı sıra, aşağıdaki gibi listelenecek dizini de belirtebiliriz:</p>
+ <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls /usr</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">bin gacodys include lib local sbin share src
+        </div>
+      </div>
+    </div>
+  </div> 
+  <p>Birden fazla dizin bile belirtebiliriz. Aşağıdaki örnekte, hem kullanıcının ev dizinini ("~" karakteri ile sembolize edilir) hem de /usr dizinini listeliyoruz.</p>
+ <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls ~ /usr</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/hocody/cody:
+        </div>
+        <div class="Terminal__text">Desktop Docucodynts Music Pictures Public Templates Videos
+        </div>
+        <div class="Terminal__text">/usr:
+        </div>
+        <div class="Terminal__text">bin gacodys include lib local sbin share src
+        </div>
+      </div>
+    </div>
+  </div> 
+  <p>Daha fazla ayrıntı ortaya çıkarmak için çıktının biçimini de değiştirebiliriz.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls -ls</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">total 56</div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Desktop
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Documents 
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Music
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Pictures
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Public
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Templates
+        </div>
+        <div class="Terminal__text">drwxrwxr-x 2 cody cody 4096 2017-10-26 17:20 Videos
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Komutun başına "-l" ekleyerek çıktıyı uzun formata dönüştürdük.</p>
+  <p>Bu bizi çoğu komutun nasıl çalıştığıyla ilgili çok önemli bir noktaya getiriyor. Komutları genellikle davranışlarını değiştiren bir veya daha fazla seçenek ve komutun üzerinde işlem yaptığı öğeler olan bir veya daha fazla argüman takip eder. Yani çoğu komut şuna benzer:</p>
+  <div class="infobox">
+    komut -seçenekler argümanları
+  </div>
+  <p>Çoğu komut, önünde bir tire bulunan tek bir karakterden oluşan seçenekleri kullanır, örneğin "-l". Bununla birlikte, GNU Projesi'ndekiler de dahil olmak üzere birçok komut, önünde iki tire bulunan bir kelimeden oluşan uzun seçenekleri de destekler. Ayrıca, birçok komut birden fazla kısa seçeneğin bir araya getirilmesine izin verir. Aşağıdaki örnekte, ls komutuna iki seçenek verilmiştir, bunlar uzun formatlı çıktı üretmek için l seçeneği ve sonucu dosyanın değişiklik zamanına göre sıralamak için t seçeneğidir.</p>
+  <div class="infobox"> ls -lt</div>
+  <p>Sıralama düzenini tersine çevirmek için "--reverse" şeklinde uzatılmış versiyonu olan bir seçenek ekleyeceğiz.</p>
+  <div class="infobox">ls -lt --reverse</div>
+  <p>ls komutunun çok sayıda olası seçeneği vardır. En yaygın olanları tabloda listelenmiştir.</p>
+  <div class="infobox"><ul>
+    <li>-Seçenek --Uzun_Seçenek  Açıklama</li>
+    <li>-a --all Normalde listelenmeyen (yani gizli olan) nokta ile başlayan adlara sahip olanlar da dahil olmak üzere tüm dosyaları listeler.</li>
+    <li>-A --almost-all Yukarıdaki -a seçeneği gibi, ancak bu seçenek list . (geçerli dizin) ve .. (üst dizin) dizini).</li>
+    <li>-d --directory Normalde, bir dizin belirtilirse, ls dizinin kendisini değil, içeriğini listeler. Dizinin içeriği yerine dizinle ilgili ayrıntıları görmek için bu seçeneği -l seçeneğiyle birlikte kullanın.</li>
+    <li>-F --classify Bu seçenek bir gösterge karakteri ekleyecektir
+      listelenen her adın sonuna eklenir. Örneğin, bir
+      ad bir dizin ise ileri eğik çizgi (/).</li>
+      <li>-h --human-readable Uzun formatlı listelerde, dosya boyutlarını bayt yerine insan tarafından okunabilir formatta görüntüleyin.</li>
+    <li>-l Sonuçları uzun formatta görüntüleme</li>
+    <li>-r --reverse Sonuçları ters sırada görüntüler. Normalde, ls sonuçları artan alfabetik sırayla görüntüler.</li>
+    <li>-S Sonuçları dosya boyutuna göre sıralayın.</li>
+    <li>-t Değişiklik zamanına göre sıralayın.</li>
+  </ul></div>
+  <p>Daha önce gördüğümüz gibi, -l seçeneği ls'nin sonuçlarını uzun formatta göstermesine neden olur. Bu format çok sayıda yararlı bilgi içerir. İşte bir Examples dizini Ubuntu sisteminde:</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+
+        <div class="Terminal__text">
+          -rw-r--r-- 1 root root 3576296 2017-04-03 11:05 Experience ubuntu.ogg
+          <br>
+          -rw-r--r-- 1 root root 1186219 2017-04-03 11:05 kubuntu-leaflet.png
+          <br>
+          -rw-r--r-- 1 root root 47584 2017-04-03 11:05 logo-Edubuntu.png
+          <br>
+          -rw-r--r-- 1 root root 44355 2017-04-03 11:05 logo-Kubuntu.png
+          <br>
+          -rw-r--r-- 1 root root 34391 2017-04-03 11:05 logo-Ubuntu.png
+          <br>
+          -rw-r--r-- 1 root root 32059 2017-04-03 11:05 oo-cd-cover.odf
+          <br>
+          -rw-r--r-- 1 root root 159744 2017-04-03 11:05 oo-derivatives.doc
+          <br>
+          -rw-r--r-- 1 root root 27837 2017-04-03 11:05 oo-maxwell.odt
+          <br>
+          -rw-r--r-- 1 root root 98816 2017-04-03 11:05 oo-trig.xls
+          <br>
+          -rw-r--r-- 1 root root 453764 2017-04-03 11:05 oo-welcome.odt
+          <br>
+          -rw-r--r-- 1 root root 358374 2017-04-03 11:05 ubuntu Sax.ogg
+          <br>
+          </div>
+      </div>
+    </div>
+  </div>
+  <p>Alttaki tablo, dosyalardan birindeki farklı alanlara ve bunların anlamlarına bir bakış sunmaktadır.</p>
+  <div class="infobox">
+    <ul>
+      <li>Alan ve Anlamı</li>
+      <li>-rw-r--r-- : Dosyaya erişim hakları. İlk karakter dosya türünü gösterir. Farklı türler arasında, baştaki tire normal bir dosya anlamına gelirken, "d" bir dizini belirtir. Sonraki üç karakter dosyanın sahibi için, sonraki üç karakter dosyanın grubunun üyeleri için ve son üç karakter de diğer herkes için erişim haklarıdır. Bölüm 9 "İzinler" bunun tam anlamını daha ayrıntılı olarak tartışmaktadır.</li>
+      <li>1 : Dosyanın sabit bağlantı sayısı.</li>
+      <li>root : Dosya sahibinin kullanıcı adı.</li>
+      <li>root : Dosyanın sahibi olan grubun adı.</li>
+      <li>32059 : Dosyanın bayt cinsinden boyutu.</li>
+      <li>2007-04-03 11:05 Dosyanın son değiştirildiği tarih ve saat</li>
+      <li>oo-cd-cover.odf : Dosyanın adı.</li>
+    </ul>
+  </div>
+  <p>Sistemi keşfederken dosyaların ne içerdiğini bilmek faydalı olacaktır. Bunu yapmak için bir dosyanın türünü belirlemek için file komutunu kullanın. Daha önce tartıştığımız gibi, dosya adları Linux'un bir dosyanın içeriğini yansıtması gerekmez. "picture.jpg" gibi bir dosya adı normalde JPEG sıkıştırılmış bir görüntü içermesi beklenirken, bu görüntünün Linux. File komutunu bu şekilde çağırabiliriz:</p>
+  <div class="infobox">file filename
+  </div>
+  <p>Çağrıldığında, file komutu dosyanın içeriğinin kısa bir açıklamasını yazdıracaktır. Örneğin:</p>
+    <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;file picture.png</span>
+        </div>
+        <div class="Terminal__text">picture.jpg: JPEG image data, JFIF standard 1.01
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Birçok dosya türü vardır. Aslında, Linux gibi Unix benzeri işletim sistemlerindeki yaygın fikirlerden biri "her şeyin bir dosya" olduğudur. Derslerimizde ilerledikçe, bu ifadenin ne kadar doğru olduğunu göreceğiz. </p>
+  <p>less komutu metin dosyalarını görüntülemek için kullanılan bir programdır. Linux sistemimiz boyunca, insan tarafından okunabilir metin içeren birçok dosya vardır. less programı bunları incelemek için uygun bir yol sağlar.</p>
+  <p>Metin dosyalarını neden incelemek isteyelim? Çünkü sistem ayarlarını içeren dosyaların çoğu (yapılandırma dosyaları olarak adlandırılır) bu formatta saklanır ve bunları okuyabilmek bize sistemin nasıl çalıştığı hakkında bilgi verir. Buna ek olarak, sistemin kullandığı bazı gerçek programlar da (script olarak adlandırılır) bu formatta saklanır. Daha sonraki bölümlerde, sistem ayarlarını değiştirmek ve kendi betiklerimizi yazmak için metin dosyalarını nasıl düzenleyeceğimizi öğreneceğiz, ancak şimdilik sadece içeriklerine bakacağız. less komutu şu şekilde kullanılır:</p>
+  <div class="infobox">less filename
+  </div>
+  <p>Bir kez başlatıldığında, less programı bir metin üzerinde ileri ve geri kaydırma yapmamızı sağlar dosyasını açın. Örneğin, sistemin tüm kullanıcı hesaplarını tanımlayan dosyayı incelemek için aşağıdaki komut:</p>
+    <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;less /etc/passwd</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Less programı başladığında, dosyanın içeriğini görüntüleyebiliriz. Dosya bir sayfadan uzunsa, yukarı ve aşağı kaydırabiliriz. less programından çıkmak için q tuşuna basın. Aşağıdaki tabloda less tarafından kullanılan en yaygın klavye komutları listelenmiştir.</p>
+  <div class="infobox">
+    <ul>
+      <li>Komut - İşlemi</li>
+      <li>Page Up veya b - Bir sayfa geri git </li>
+      <li>Page Down veya space - Bir sayfa ileri kaydırma</li>
+      <li>Yukarı ok - Bir satır yukarı kaydırma</li>
+      <li>Aşağı ok - Bir satır aşağı kaydırma</li>
+      <li>G - Metin dosyasının sonuna git</li>
+      <li>1G veya g - Metin dosyasının başına git</li>
+      <li>/characters - Bir sonraki karakter oluşumuna kadar ileriye doğru ara</li>
+      <li>n - Önceki aramanın bir sonraki oluşumunu arama</li>
+      <li>h - Yardım ekranını görüntüleme</li>
+      <li>q - çık</li>
+    </ul>
+  </div>
+  <p>Bir Linux sistemindeki dosya sistemi düzeni diğer Unix benzeri sistemlerde bulunanlara çok benzer. Tasarım aslında Linux Dosya Sistemi adı verilen yayınlanmış bir standartta belirtilmiştir Hiyerarşi Standardı. Tüm Linux dağıtımları bu standarda tam olarak uymaz ancak çoğu oldukça yaklaştı.</p>
+  <p>Daha sonra, Linux sistemimizi neyin harekete geçirdiğini görmek için dosya sisteminde kendimiz dolaşacağız. Bu bize navigasyon becerilerimizi uygulama şansı verecektir. Keşfedeceğimiz şeylerden biri de ilginç dosyaların çoğunun insan tarafından okunabilir düz metinler halinde olmasıdır. Turumuza devam ederken aşağıdakileri deneyin:</p>
+  <div class="infobox">  <ol>
+    <li>
+      Belirli bir dizinin içine cd</li>
+<li> Dizin içeriğini ls -l ile listeleyin</li>
+<li> İlginç bir dosya görürseniz, dosya ile içeriğini belirleyin</li>
+<li> Metin gibi görünüyorsa, daha az metinle görüntülemeyi deneyin</li>
+<li> Eğer yanlışlıkla metin olmayan bir dosyayı görüntülemeye çalışırsak ve bu terminal penceresini karıştırırsa, reset komutunu girerek kurtarabiliriz.</li>
+  </ol>
+</div>
+<p>Kopyala ve yapıştır numarasını unutmayın! Fare kullanıyorsanız, iki kez kopyalamak için bir dosya adına tıklayın ve komutlara yapıştırmak için orta tıklayın.</p>
+<p>Etrafta dolaşırken, bir şeylere bakmaktan korkmayın. Normal kullanıcıların bir şeyleri karıştırması büyük ölçüde yasaktır. Bu sistem yöneticisinin işidir! Eğer bir komut bir şeyden şikayet ediyorsa, başka bir şeye geçin. Etrafa bakmak için biraz zaman harcayın. Sistem keşfetmek için bizimdir. Unutmayın, Linux'ta sır yoktur!</p>
+<p>Alttaki tablo keşfedebileceğimiz dizinlerden sadece birkaçını listeler. Linux dağıtımımıza bağlı olarak bazı küçük farklılıklar olabilir. Etrafa bakmaktan ve daha fazlasını denemekten korkmayın!</p>
+<div class="infobox">
+  <ul>
+    <li>Dizin ve Açıklamaları</li>
+    <li>/root - Her şeyin başladığı yer.</li>
+    <li>/bin - Sistemin önyüklenmesi ve çalışması için bulunması gereken ikili dosyaları (programları) içerir.</li>
+    <li>/boot - Linux çekirdeğini, ilk RAM disk görüntüsünü (önyükleme sırasında gereken sürücüler için) ve önyükleme yükleyicisini içerir.</li>
+    <li>/dev - Bu, aygıt düğümlerini içeren özel bir dizindir. "Her şey bir dosyadır" sözü aygıtlar için de geçerlidir. Çekirdeğin anladığı tüm aygıtların bir listesini tuttuğu yer burasıdır.</li>
+    <li>/etc - /etc dizini sistem genelindeki tüm yapılandırma dosyalarını içerir. Ayrıca önyükleme sırasında sistem hizmetlerinin her birini başlatan bir kabuk komut dosyası koleksiyonu da içerir. Bu dizindeki her şey okunabilir metin olmalıdır.</li>
+    <li>/home - Normal yapılandırmalarda, her kullanıcıya /home içinde bir dizin verilir. Sıradan kullanıcılar yalnızca kendi ev dizinlerine dosya yazabilirler. Bu sınırlama sistemi hatalı kullanıcı faaliyetlerinden korur.</li>
+    <li>/lib - Çekirdek sistem tarafından kullanılan paylaşılan kütüphane dosyalarını içerir programlar. Bunlar dinamik bağlantı kütüphanelerine benzer (DLL'ler) Windows'ta var.</li>
+    <li>/lost+found - ext4 gibi bir Linux dosya sistemi kullanan her biçimlendirilmiş bölüm veya aygıt bu dizine sahip olacaktır. Bir dosya sistemi bozulması olayından kısmi bir kurtarma durumunda kullanılır. Sistemimize gerçekten kötü bir şey olmadıkça, bu dizin boş kalacaktır</li>
+    <li>/media - Modern Linux sistemlerinde /media dizini, takıldığında otomatik olarak bağlanan USB sürücüler, CD-ROM'lar vb. gibi çıkarılabilir ortamlar için bağlama noktalarını içerecektir</li>
+    <li>/mnt - Eski Linux sistemlerinde, /mnt dizini elle bağlanmış çıkarılabilir aygıtlar için bağlama noktaları içerir.</li>
+    <li>/opt - /opt dizini "isteğe bağlı" yazılımları yüklemek için kullanılır. Bu dizin esas olarak sisteme yüklenebilecek ticari yazılım ürünlerini tutmak için kullanılır.</li>
+    <li>/proc - /proc dizini özeldir. Sabit diskte depolanan dosyalar anlamında gerçek bir dosya sistemi değildir. Daha ziyade, Linux çekirdeği tarafından tutulan sanal bir dosya sistemidir. İçerdiği "dosyalar" çekirdeğin kendisine açılan gözetleme delikleridir. Dosyalar okunabilir ve bize çekirdeğin bilgisayarı nasıl gördüğünün bir resmini verir.</li>
+    <li>/root - Bu, root hesabı için ev dizinidir</li>
+    <li>/sbin - Bu dizin "sistem" ikililerini içerir. Bunlar genellikle hayati sistem görevlerini yerine getiren programlar süper kullanıcı için ayrılmıştır</li>
+    <li>/tmp - /tmp dizini, çeşitli programlar tarafından oluşturulan geçici, geçici dosyaların depolanması için tasarlanmıştır. Bazı yapılandırmalar, sistem her yeniden başlatıldığında bu dizinin boşaltılmasına neden olur.</li>
+    <li>/usr - /usr dizin ağacı muhtemelen bir Linux sistemindeki en büyük dizin ağacıdır. Normal kullanıcılar tarafından kullanılan tüm programları ve destek dosyalarını içerir.</li>
+    <li>/usr/bin - /usr/bin tarafından yüklenen çalıştırılabilir programları içerir Linux dağıtımı. Bu dizin için nadir değildir binlerce program düzenlemek için.</li>
+    <li>/usr/lib - /usr/bin içindeki programlar için paylaşılan kütüphaneler.</li>
+    <li>/usr/local - /usr/local ağacı, dağıtımla birlikte verilmeyen ancak sistem genelinde kullanılması amaçlanan programların yüklendiği yerdir. Kaynak koddan derlenen programlar normalde /usr/local/bin içine yüklenir. Yeni kurulmuş bir Linux sisteminde bu ağaç vardır, ancak sistem yöneticisi içine bir şey koyana kadar boş olacaktır.</li>
+    <li>/usr/sbin - Daha fazla sistem yönetim programı içerir.</li>
+    <li>/usr/share - /usr/share, /usr/bin içindeki programlar tarafından kullanılan tüm paylaşılan verileri içerir. Bu, varsayılan yapılandırma dosyaları, simgeler, ekran arka planları, ses dosyaları vb. gibi şeyleri içerir.</li>
+    <li>/usr/share/doc - Sisteme yüklenen çoğu paket bir tür dokümantasyon içerecektir. usr/share/doc içinde, pakete göre düzenlenmiş dokümantasyon dosyalarını bulacağız.</li>
+    <li>/var - /tmp ve /home haricinde, şimdiye kadar incelediğimiz dizinler nispeten statik kalır, yani içerikleri değişmez. Var dizin ağacı, değişmesi muhtemel verilerin depolandığı yerdir. Çeşitli veritabanları, spool dosyaları, kullanıcı postaları vb. burada bulunur.</li>
+    <li>/var/log - /var/log günlük dosyalarını, çeşitli sistem etkinliklerinin kayıtlarını içerir. Bunlar önemlidir ve zaman zaman izlenmelidir.</li>
+  </ul>
+</div>
+</body>
+
+
+</html>

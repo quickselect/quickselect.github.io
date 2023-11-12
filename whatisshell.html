@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="terminal.css" />
+</head>
+<body>
+  <h2>Shell nedir?</h2>
+  <p>Kabuk(SHELL), klavye komutlarını alan ve bunları yerine getirmesi için işletim sistemine ileten bir programdır. Neredeyse tüm Linux dağıtımları GNU Projesi'nden bash adında bir kabuk programı sağlar. "bash" ismi "Bourne Again SHell" kelimelerinin kısaltmasıdır ve bash'in Steve Bourne tarafından yazılan orijinal Unix kabuk programı sh'nin geliştirilmiş bir alternatifi olduğu gerçeğine bir göndermedir.</p>
+  <p>Bir grafik kullanıcı arayüzü (GUI) kullanırken, kabukla etkileşim kurmak için terminal emülatörü adı verilen başka bir programa ihtiyacımız vardır. Masaüstü menülerimize bakarsak, muhtemelen bir tane bulacağız. KDE konsole ve GNOME gnome-terminal kullanır, ancak menümüzde muhtemelen sadece "terminal" olarak adlandırılır. Linux için bir dizi başka terminal emülatörü mevcuttur, ancak hepsi temelde aynı şeyi yapar; bize kabuğa erişim sağlar. Muhtemelen sahip olduğu zil ve ıslık sayısına bağlı olarak bir veya başka bir terminal emülatörü için bir tercih geliştireceksiniz.</p>
+  <p>Öyleyse başlayalım. Terminal emülatörünü başlatın! Açıldığında şöyle bir şey görmeliyiz:</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__text">Welcome to Linux!</div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__cursor"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Buna kabuk istemi denir ve kabuk girdi kabul etmeye hazır olduğunda görünür. Dağıtıma bağlı olarak görünümü biraz değişse de, genellikle kullanıcı_adınızı@makineadı, ardından geçerli çalışma dizini (bu konuda daha fazla bilgi birazdan) ve bir dolar işareti içerecektir.</p>
+  <p>Şimdiye kadar her şeyin yolunda olduğunu varsayarak, biraz yazmayı deneyelim. Şuraya biraz anlamsız şeyler girin:</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__text">Welcome to Linux!</div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <div class="Prompt__dollar">&nbsp&nbspsdfsalkjsdf</div>
+          <span class="Prompt__cursor"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>Bu komut anlamsız olduğundan, kabuk bize bunu "bash: kaekfjaeifj: command not found" olarak söyler.</p>
+  <p>Yukarı ok tuşuna basarsak, komut isteminden sonra bir önceki sdfsalkjsdf komutunun yeniden göründüğünü göreceğiz. Buna komut geçmişi denir. Çoğu Linux dağıtımı varsayılan olarak son 1000 komutu hatırlar. Aşağı ok tuşuna bastığınızda bir önceki komut kaybolur.</p>
+  <p>Yukarı ok tuşuna tekrar basarak önceki komutu geri çağırın. Sol ve sağ ok tuşlarını denersek, imleci komut satırında herhangi bir yere nasıl konumlandırabileceğimizi göreceğiz. Bu, komutları düzenlemeyi kolaylaştırır.</p>
+  <p>Terminal oturumunu terminal emülatörü penceresini kapatarak, kabuk istemine exit komutunu girerek veya Ctrl-d tuşlarına basarak sonlandırabiliriz.</p>
+
+</body>
+</html>

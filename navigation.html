@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="terminal.css" />
+</head>
+<body>
+  <h2>Navigasyon</h2>
+  <p>Öğrenmemiz gereken ilk şey (nasıl yazacağımızın yanı sıra) Linux sistemimizdeki dosya sisteminde nasıl gezineceğimizdir. Bu bölümde aşağıdaki komutları tanıtacağız:</p>
+  <div class="infobox">
+    <ul>
+      <li>pwd - Mevcut çalışma dizininin adını yazdırır</li>
+      <li>cd - Dizin değiştir</li>
+      <li>ls - Dizin içeriğini listeler</li>
+    </ul>
+  </div>
+  <p>Windows gibi, Linux gibi Unix benzeri bir işletim sistemi de dosyalarını hiyerarşik dizin yapısı olarak adlandırılan bir yapıda düzenler. Bu, dosyalar ve diğer dizinleri içerebilen dizinlerin (diğer sistemlerde bazen klasör olarak adlandırılır) ağaç benzeri bir düzende organize edildiği anlamına gelir. Dosya sistemindeki ilk dizine kök dizin denir. Kök dizin dosyaları ve alt dizinleri içerir, bunlar da daha fazla dosya ve alt dizin içerir ve bu böyle devam eder.</p>
+  <p>Her depolama aygıtı için ayrı bir dosya sistemi ağacına sahip olan Windows'un aksine, Linux gibi Unix benzeri sistemlerde, bilgisayara kaç sürücü veya depolama aygıtı takılı olursa olsun her zaman tek bir dosya sistemi ağacı vardır. Depolama aygıtları, sistemin bakımından sorumlu kişi (ya da kişiler) olan sistem yöneticisinin kaprislerine göre ağacın çeşitli noktalarına bağlanır (ya da daha doğru bir ifadeyle monte edilir).</p>
+  <p>Herhangi bir zamanda, tek bir dizinin içindeyizdir ve dizinde bulunan dosyaları ve üstümüzdeki dizine (üst dizin olarak adlandırılır) ve altımızdaki tüm alt dizinlere giden yolu görebiliriz. İçinde bulunduğumuz dizine geçerli çalışma dizini denir. Geçerli çalışma dizinini görüntülemek için pwd (print working directory) komutunu kullanırız.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/home/cody</div>
+      </div>
+    </div>
+  </div>
+  <p>Sistemimizde ilk oturum açtığımızda (ya da bir terminal emülatörü oturumu başlattığımızda) geçerli çalışma dizinimiz ev dizinimiz olarak ayarlanır. Her kullanıcı hesabına kendi ev dizini verilir ve normal bir kullanıcının dosya yazmasına izin verilen tek yerdir</p>
+  <p>Geçerli çalışma dizinindeki dosya ve dizinleri listelemek için ls komutunu kullanırız.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">Desktop Documents Music Pictures Public Templates Videos</div>
+      </div>
+    </div>
+  </div>
+  <p>Aslında, ls komutunu sadece geçerli çalışma dizininin değil, herhangi bir dizinin içeriğini listelemek için kullanabiliriz ve yapabileceği başka birçok eğlenceli şey de vardır. Bir sonraki bölümde ls ile daha fazla zaman geçireceğiz.</p>
+  <p>Çalışma dizinimizi (ağaç şeklindeki labirentimizde durduğumuz yer) değiştirmek için cd komutunu kullanırız. Bunu yapmak için cd yazın ve ardından istediğiniz çalışma dizininin yol adını yazın. Yol adı, istediğimiz dizine ulaşmak için ağacın dalları boyunca izlediğimiz yoldur. Yol adlarını iki farklı şekilde belirtebiliriz; mutlak yol adları ya da göreceli yol adları olarak. Önce mutlak yol adlarını ele alalım.</p>
+  <p>Mutlak bir yol adı kök(root) dizin ile başlar ve ağaç dalını şu şekilde takip eder istenen dizin veya dosyaya giden yol tamamlanana kadar dallanır. Örneğin, bir Sistemimizdeki programların çoğunun kurulu olduğu dizin. Bu dizinin yol adı /usr/bin'dir. Bu, kök dizinden (/usr/bin ile temsil edilen) yol adında baştaki eğik çizgi) bir dizin içeren "usr" adlı bir dizin vardır "bin" olarak adlandırılır.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd /usr/bin</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr/bin</div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;ls</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">... Uzun, çok sayıda dosyanın listelenmesi ...</div>
+      </div>
+    </div>
+  </div>
+  <p>Şimdi geçerli çalışma dizinini /usr/bin olarak değiştirdiğimizi ve bunun dosyalarla dolu olduğunu görebiliriz. Kabuk isteminin nasıl değiştiğine dikkat ettiniz mi? Kolaylık olması açısından, genellikle çalışma dizininin adını otomatik olarak gösterecek şekilde ayarlanır</p>
+  <p>Mutlak bir yol adının kök dizinden başlayıp hedefine gittiği yerde, göreli bir yol adı çalışma dizininden başlar. Bunu yapmak için, dosya sistemi ağacındaki göreli konumları temsil etmek üzere birkaç özel gösterim kullanır. Bu özel gösterimler "." (nokta) ve "." (nokta nokta)'dır.</p>
+  <p>"." notasyonu çalışma dizinini, ".." notasyonu ise çalışma dizininin üst dizinini ifade eder. İşte nasıl çalıştığı. Çalışma dizinini tekrar / usr/bin olarak değiştirelim.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">~</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd /usr/bin</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr/bin</div>
+     </div>
+    </div>
+  </div>
+  <p>Şimdi diyelim ki çalışma dizinini /usr/ bin'in üst dizini olan /usr olarak değiştirmek istedik. Bunu iki farklı şekilde yapabiliriz, ya mutlak bir yol adı kullanarak.</p>
+  <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd /usr</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr</div>
+     </div>
+    </div>
+  </div>
+  <p>veya göreceli bir yol adı kullanarak.</p>
+   <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd ..</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr</div>
+     </div>
+    </div>
+  </div> 
+  <p>Aynı sonuçları veren iki farklı yöntem. Hangisini kullanmalıyız? En az yazmayı gerektireni! Benzer şekilde, çalışma dizinini /usr'den /usr/bin'e iki farklı şekilde değiştirebiliriz, ya mutlak bir yol adı kullanarak:</p>
+   <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">usr</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd /usr/bin/</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr/bin</div>
+     </div>
+    </div>
+  </div> 
+  <p>veya göreceli bir yol adı kullanarak.</p>
+   <div class="container">
+    <div class="Terminal">
+      <div class="Terminal__Toolbar">
+        <div class="Toolbar__buttons">
+          <button class="Toolbar__button Toolbar__button--exit">&#10005;</button>
+          <button class="Toolbar__button">&#9472;</button>
+          <button class="Toolbar__button">&#9723;</button>
+        </div>
+        <div class="Toolbar__user">cody@ubuntu:~</div>
+      </div>
+      <div class="Terminal__body">
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">usr</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;cd ./bin</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__Prompt">
+          <span class="Prompt__user">cody@ubuntu:</span><span class="Prompt__location">bin</span><span class="Prompt__dollar">$</span>
+          <span class="Prompt__dollar">&nbsp;pwd</span>
+          <!-- <span class="Prompt__cursor"></span> -->
+        </div>
+        <div class="Terminal__text">/usr/bin</div>
+     </div>
+    </div>
+  </div> 
+  <p>Şimdi, burada dikkat çekilmesi gereken önemli bir husus var. Neredeyse tüm durumlarda "./". Bu ima edilir. 'cd bin' ile aynı şeyi yapar. Genel olarak, bir şeye yol adı belirtmezsek, çalışma dizini varsayılacaktır.</p>
+  <p>Alttaki Tablo'da, geçerli çalışma dizininin hızlı bir şekilde değiştirilebileceği bazı yararlı yolları görebilirsiniz.</p>
+  <div class="infobox">
+    <ul>
+      <li>'cd' Çalışma dizinini ev dizininiz olarak değiştirir.</li>
+      <li>'cd -' Çalışma dizinini önceki çalışma dizinine değiştirir.</li>
+      <li>'cd ~kullanıcı_adı' Çalışma dizinini kullanıcı_adının ev dizinine değiştirir. Örneğin, cd ~bob dizini "bob" kullanıcısının ev dizinine değiştirir.</li>
+    </ul>
+  </div>
+ 
+</body>
+</html>
