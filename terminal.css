@@ -101,16 +101,11 @@
   background: white;
   display: block;
   margin-left: 8px;
-  animation: 2000ms ease infinite alternate blink;
+  animation: blink 1500ms steps(2,start) infinite;
 }
 
 @keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  to {visibility: hidden;}
 }
 
 @media (max-width: 600px) {
