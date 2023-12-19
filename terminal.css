@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+@media screen and (max-width: 650px) {
+  .container {
+    width: 600px;
+  }
+}
+
 .container {
   font-family: 'Ubuntu';
   display: flex;

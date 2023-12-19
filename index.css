@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;700&display=swap');
 
+@media screen and (max-width: 650px) {
+  html {
+    width: 620px;
+    overflow:auto;
+  }
+}
+
+
 body{
   /* width:100%; */
   font-family: 'Poppins', sans-serif;
