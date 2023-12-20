@@ -51,11 +51,14 @@ p{
 
 
 .back-button {
-  background: rgb(0,128,128);
+  background: rgb(57,2,39);
+  border-radius: .5em;
+  border:1px solid rgb(91,91,91);
   color: white;
   font-size: 30px;
   line-height: 1;
   padding: 20px 30px 15px 25px;
+  margin-top: 50px;
   text-decoration: none;
   transition: all 0.2s;
 }
