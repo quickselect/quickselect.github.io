@@ -11,6 +11,12 @@
   color-scheme: dark;
 }
 
+
+::selection {
+  color: #19191c;
+  background:white;
+}
+
 body{
   /* width:100%; */
   font-family: 'Poppins', sans-serif;
