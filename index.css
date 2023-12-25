@@ -82,3 +82,14 @@ p{
 a{
   text-decoration: none;
 }
+
+.bottom-index{
+  display:flex;
+  flex-direction: row;
+  height:3rem;
+  justify-content: center;
+  align-items: center;
+  > img{
+    height:inherit;
+  }
+}
