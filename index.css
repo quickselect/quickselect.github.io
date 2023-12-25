@@ -7,6 +7,9 @@
   }
 }
 
+:root {
+  color-scheme: dark;
+}
 
 body{
   /* width:100%; */
@@ -65,4 +68,17 @@ p{
 
 .back-button:hover {
   background: rgba(0,128,128,0.8);
+}
+
+/*
+  this is indeed a horrible fix
+*/
+.header:hover:after{
+  content: "<---";
+  color:orange;
+  animation: 500ms ease-in-out slidein;
+}
+
+a{
+  text-decoration: none;
 }
