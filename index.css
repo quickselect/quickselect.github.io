@@ -99,3 +99,10 @@ a{
     height:inherit;
   }
 }
+
+.banner{
+  width:80%;
+  margin-bottom: 20px;
+  user-select:none;
+}
+
